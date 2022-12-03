@@ -1,7 +1,10 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Routes/Routes";
+
 function App() {
   return (
-    <div className="text-3xl text-cyan-600">
-      <h1>Hello</h1>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }
