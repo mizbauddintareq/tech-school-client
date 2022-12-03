@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../context/AuthProvider";
 
 const Registration = () => {
+  const { createUser } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -10,7 +14,27 @@ const Registration = () => {
     const password = form.pass.value;
     const photoURL = form.photo.value;
 
-    console.log(name, email, password, photoURL);
+    createUser(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "User has been created",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        console.log(user);
+        form.reset();
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        Swal.fire({
+          icon: "error",
+          title: `${errorCode}`,
+        });
+      });
   };
   return (
     <div className="mt-14">
