@@ -4,7 +4,7 @@ import { AuthContext } from "../../context/AuthProvider";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
-
+  console.log(user.email);
   return (
     <div>
       <div className="navbar card-shadow">
