@@ -32,19 +32,24 @@ export const router = createBrowserRouter([
       },
       {
         path: "courses",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://tech-school-server-liard.vercel.app/courses"),
         element: <Courses />,
       },
       {
         path: "/course/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/${params.id}`),
+          fetch(
+            `https://tech-school-server-liard.vercel.app/course/${params.id}`
+          ),
         element: <CourseDetails />,
       },
       {
         path: "/premium/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/${params.id}`),
+          fetch(
+            `https://tech-school-server-liard.vercel.app/course/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <Premium />
