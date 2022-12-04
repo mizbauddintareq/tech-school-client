@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider";
 
 const Registration = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserIfo } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -26,6 +26,7 @@ const Registration = () => {
           timer: 1500,
         });
         console.log(user);
+        handleUpdateUserIfo({ displayName: name, photoURL });
         form.reset();
       })
       .catch((error) => {
@@ -34,6 +35,14 @@ const Registration = () => {
           icon: "error",
           title: `${errorCode}`,
         });
+      });
+  };
+
+  const handleUpdateUserIfo = (info) => {
+    updateUserIfo(info)
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
       });
   };
   return (

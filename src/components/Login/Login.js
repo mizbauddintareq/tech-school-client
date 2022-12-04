@@ -1,9 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
   const { signInUser } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,9 +21,8 @@ const Login = () => {
     signInUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-
-        console.log(user);
         form.reset();
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
