@@ -1,6 +1,6 @@
 import { createRef } from "react";
 import { FaDownload } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import ReactToPdf from "react-to-pdf";
 const ref = createRef();
 const CourseDetails = () => {
@@ -43,7 +43,9 @@ const CourseDetails = () => {
             ))}
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Listen</button>
+            <button className="btn btn-primary">
+              <Link to={`/premium/${id}`}>Get Premium Access</Link>
+            </button>
           </div>
         </div>
       </div>

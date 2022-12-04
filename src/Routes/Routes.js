@@ -4,6 +4,7 @@ import CourseDetails from "../components/CourseDetails/CourseDetails";
 import Courses from "../components/Courses/Courses";
 import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
+import Premium from "../components/Premium/Premium";
 import Registration from "../components/Registration/Registration";
 import Main from "../layouts/Main";
 import PrivateRoute from "./PrivateRoute";
@@ -39,6 +40,16 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/course/${params.id}`),
         element: <CourseDetails />,
+      },
+      {
+        path: "/premium/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/course/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <Premium />
+          </PrivateRoute>
+        ),
       },
     ],
   },
