@@ -7,6 +7,9 @@ import {
   onAuthStateChanged,
   signOut,
   updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
+  GithubAuthProvider,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import { useEffect } from "react";
@@ -31,6 +34,17 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, info);
   };
 
+  const googleLogin = () => {
+    setLoading(false);
+    const provider = new GoogleAuthProvider();
+    return signInWithPopup(auth, provider);
+  };
+
+  const githubLogin = () => {
+    const provider = new GithubAuthProvider();
+    return signInWithPopup(auth, provider);
+  };
+
   const signOutUser = () => {
     setLoading(true);
     return signOut(auth);
@@ -51,6 +65,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     signInUser,
     signOutUser,
+    googleLogin,
+    githubLogin,
     updateUserIfo,
   };
   return (

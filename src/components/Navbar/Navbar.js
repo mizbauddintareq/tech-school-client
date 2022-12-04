@@ -5,7 +5,6 @@ import { AuthContext } from "../../context/AuthProvider";
 import { FaUserAlt } from "react-icons/fa";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
-  console.log(user?.email);
 
   const handleLogOut = () => {
     signOutUser()

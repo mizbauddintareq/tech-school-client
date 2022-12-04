@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider";
@@ -9,7 +10,7 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -22,6 +23,37 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         form.reset();
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        Swal.fire({
+          icon: "error",
+          title: `${errorCode}`,
+        });
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+        console.log("hello");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        Swal.fire({
+          icon: "error",
+          title: `${errorCode}`,
+        });
+      });
+  };
+
+  const handleGithubLogin = () => {
+    githubLogin()
+      .then((result) => {
+        const user = result.user;
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -74,6 +106,31 @@ const Login = () => {
             </button>
           </div>
         </form>
+        <div className="divider">OR</div>
+        <div className="flex justify-around align-middle">
+          <div>
+            <div className="card shadow-xl">
+              <button
+                className="card-body text-4xl text-center"
+                onClick={handleGoogleLogin}
+              >
+                <FaGoogle />
+                <span className="text-sm">Google</span>
+              </button>
+            </div>
+          </div>
+          <div>
+            <div className="card shadow-xl">
+              <button
+                className="card-body text-4xl"
+                onClick={handleGithubLogin}
+              >
+                <FaGithub />
+                <span className="text-sm">Github</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
