@@ -6,7 +6,7 @@ const Courses = () => {
   return (
     <div className="grid md:grid-cols-5 gap-4 w-11/12 mx-auto mt-14">
       <div>
-        <ul className="menu lg:fixed">
+        <ul className="menu lg:fixed bg-slate-900 text-white">
           {courses?.map((course) => (
             <li key={course.id}>
               <Link to={`/course/${course.id}`}>{course.name}</Link>

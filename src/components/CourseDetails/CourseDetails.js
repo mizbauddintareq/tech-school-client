@@ -13,7 +13,10 @@ const CourseDetails = () => {
   };
   return (
     <div className="md:w-10/12 mx-auto mt-14">
-      <div className="card lg:card-side bg-base-100 shadow-xl" ref={ref}>
+      <div
+        className="card lg:card-side bg-slate-900 text-white shadow-xl"
+        ref={ref}
+      >
         <figure>
           <img src={thumb} alt="Album" className="image-full" />
         </figure>
@@ -29,7 +32,7 @@ const CourseDetails = () => {
               scale={0.8}
             >
               {({ toPdf }) => (
-                <button onClick={toPdf}>
+                <button onClick={toPdf} className="text-warning">
                   <FaDownload />
                 </button>
               )}
@@ -43,9 +46,9 @@ const CourseDetails = () => {
             ))}
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">
-              <Link to={`/premium/${id}`}>Get Premium Access</Link>
-            </button>
+            <Link to={`/premium/${id}`} className="btn btn-warning">
+              Get Premium Access
+            </Link>
           </div>
         </div>
       </div>

@@ -14,9 +14,9 @@ const Premium = () => {
           <h2 className="card-title">{name}</h2>
           <p>You have successfully purses this course.</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">
-              <Link to="/">Go to home</Link>
-            </button>
+            <Link to="/" className="btn btn-warning">
+              Go to home
+            </Link>
           </div>
         </div>
       </div>

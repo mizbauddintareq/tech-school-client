@@ -66,7 +66,7 @@ const Login = () => {
   };
   return (
     <div className="mt-14">
-      <div className="card-shadow lg:w-5/12 mx-auto p-8">
+      <div className=" shadow-xl rounded-md lg:w-5/12 mx-auto p-8 bg-slate-900 text-white">
         <h3 className="text-center">Please login</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-control w-full max-w-md mx-auto">
@@ -101,7 +101,7 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control w-full max-w-md mx-auto mt-3">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-warning" type="submit">
               Login
             </button>
           </div>

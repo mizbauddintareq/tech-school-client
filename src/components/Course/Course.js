@@ -5,14 +5,14 @@ const Course = ({ course }) => {
   const { name, shortInfo, badge, thumb } = course;
   return (
     <div>
-      <div className="card h-full bg-base-100 shadow-xl">
+      <div className="card h-full bg-slate-900 text-white shadow-xl">
         <figure>
           <img src={thumb} alt="thumb-img" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
             {name}
-            <div className="badge badge-secondary uppercase">{badge}</div>
+            <div className="badge badge-warning uppercase">{badge}</div>
           </h2>
           <p>{shortInfo}</p>
           <div className="card-actions justify-end">
