@@ -65,15 +65,15 @@ const Login = () => {
       });
   };
   return (
-    <div className="mt-14 ">
-      <div className=" shadow-xl rounded-md lg:w-5/12 mx-auto p-8 bg-slate-900">
-        <h3 className="text-center text-white text-2xl font-semibold mb-4">
+    <div className="py-14 bg-orange-50 dark:bg-slate-900">
+      <div className="rounded-md lg:w-5/12 mx-auto p-8 bg-orange-50 dark:bg-slate-900 dark:shadow-md shadow-2xl dark:shadow-white">
+        <h3 className="text-center dark:text-white text-2xl font-semibold mb-4">
           Please login
         </h3>
         <form onSubmit={handleSubmit}>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text text-white">Email Address</span>
+              <span className="label-text dark:text-white">Email Address</span>
             </label>
             <input
               type="email"
@@ -84,7 +84,7 @@ const Login = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text text-white">Password</span>
+              <span className="label-text dark:text-white">Password</span>
             </label>
             <input
               type="password"
@@ -94,7 +94,7 @@ const Login = () => {
             />
 
             <label className="label mt-3">
-              <span className="label-text-alt text-white">
+              <span className="label-text-alt dark:text-white">
                 New to Tech-school Please{" "}
                 <Link
                   to="/register"
@@ -106,15 +106,18 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control w-full max-w-md mx-auto mt-3">
-            <button className="btn bg-orange-900 border-0" type="submit">
+            <button
+              className="btn bg-orange-900 border-0 dark:bg-orange-500"
+              type="submit"
+            >
               Login
             </button>
           </div>
         </form>
-        <div className="divider text-white">OR</div>
+        <div className="divider dark:text-white">OR</div>
         <div className="flex justify-around align-middle">
           <div>
-            <div className="card shadow-xl bg-slate-300">
+            <div className="card shadow-2xl bg-orange-50 dark:bg-slate-300">
               <button
                 className="card-body text-4xl"
                 onClick={handleGoogleLogin}
@@ -125,7 +128,7 @@ const Login = () => {
             </div>
           </div>
           <div>
-            <div className="card shadow-xl bg-slate-300">
+            <div className="card shadow-2xl bg-orange-50 dark:bg-slate-300">
               <button
                 className="card-body text-4xl"
                 onClick={handleGithubLogin}
