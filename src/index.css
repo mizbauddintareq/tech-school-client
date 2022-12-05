@@ -2,13 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.card-shadow {
-  box-shadow: 5px 5px 10px #a9a9aa77, inset -5px -5px 10px #ffffff7e;
-  /* background: #f4fafd; */
-  border-radius: 15px;
-}
 body {
-  background-color: #fff7ed;
+  /* background-color: #fff7ed; */
   font-family: "IBM Plex Mono", monospace;
 }
 .logo-text {

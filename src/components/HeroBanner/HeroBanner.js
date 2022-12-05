@@ -1,7 +1,7 @@
 const HeroBanner = () => {
   return (
-    <div className="w-11/12 mx-auto">
-      <div className="hero min-h-screen my-10 md:my-0">
+    <div>
+      <div className="hero min-h-screen bg-orange-50 dark:bg-slate-900 dark:text-white">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/FmdTz03/1622955725643.png"
@@ -17,7 +17,7 @@ const HeroBanner = () => {
               Go ahead, give it a try. Our hands-on learning environment means
               you'll be writing real code from your very first lesson.
             </p>
-            <button className="btn bg-orange-900 border-0 font-bold">
+            <button className="btn dark:bg-white dark:text-orange-900 bg-orange-900 border-0 font-bold">
               Get Started
             </button>
           </div>

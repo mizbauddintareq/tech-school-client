@@ -13,11 +13,12 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slider = () => {
   return (
-    <div>
+    <div className="bg-orange-50 dark:bg-slate-900">
       <AutoplaySlider
         play={true}
         cancelOnInteraction={false}
         interval={4000}
+        bullets={false}
         animation="cubeAnimation"
       >
         <div data-src={slider1} />

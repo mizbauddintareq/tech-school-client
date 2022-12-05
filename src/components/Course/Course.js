@@ -5,7 +5,7 @@ const Course = ({ course }) => {
   const { name, shortInfo, badge, thumb } = course;
   return (
     <div>
-      <div className="card h-full bg-slate-900 text-white shadow-xl">
+      <div className="card h-full dark:bg-yellow-400 text-slate-900 shadow-2xl">
         <figure>
           <img src={thumb} alt="thumb-img" />
         </figure>
