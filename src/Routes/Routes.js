@@ -28,6 +28,8 @@ export const router = createBrowserRouter([
       },
       {
         path: "blogs",
+        loader: () =>
+          fetch("https://tech-school-server-liard.vercel.app/blogs"),
         element: <Blogs />,
       },
       {
