@@ -21,7 +21,7 @@ const Login = () => {
 
     signInUser(email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
+        // const user = userCredential.user;
         form.reset();
         navigate(from, { replace: true });
       })
@@ -37,7 +37,7 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
-        const user = result.user;
+        // const user = result.user;
         navigate(from, { replace: true });
         console.log("hello");
       })
@@ -53,7 +53,7 @@ const Login = () => {
   const handleGithubLogin = () => {
     githubLogin()
       .then((result) => {
-        const user = result.user;
+        // const user = result.user;
         navigate(from, { replace: true });
       })
       .catch((error) => {

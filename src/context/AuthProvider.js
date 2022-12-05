@@ -11,6 +11,7 @@ import {
   signInWithPopup,
   GithubAuthProvider,
 } from "firebase/auth";
+
 import app from "../firebase/firebase.config";
 import { useEffect } from "react";
 export const AuthContext = createContext();

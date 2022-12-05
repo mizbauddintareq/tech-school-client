@@ -13,7 +13,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slider = () => {
   return (
-    <>
+    <div>
       <AutoplaySlider
         play={true}
         cancelOnInteraction={false}
@@ -26,7 +26,7 @@ const Slider = () => {
         <div data-src={slider4} />
         <div data-src={slider5} />
       </AutoplaySlider>
-    </>
+    </div>
   );
 };
 

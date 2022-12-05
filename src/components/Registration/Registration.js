@@ -25,8 +25,9 @@ const Registration = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-        console.log(user);
+
         handleUpdateUserIfo({ displayName: name, photoURL });
+        console.log(user);
         form.reset();
       })
       .catch((error) => {

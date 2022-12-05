@@ -46,7 +46,7 @@ const CourseDetails = () => {
             ))}
           </div>
           <div className="card-actions justify-end">
-            <Link to={`/premium/${id}`} className="btn btn-warning">
+            <Link to={`/premium/${id}`} className="btn btn-warning font-bold">
               Get Premium Access
             </Link>
           </div>
