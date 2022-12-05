@@ -65,13 +65,15 @@ const Login = () => {
       });
   };
   return (
-    <div className="mt-14">
-      <div className=" shadow-xl rounded-md lg:w-5/12 mx-auto p-8">
-        <h3 className="text-center">Please login</h3>
+    <div className="mt-14 ">
+      <div className=" shadow-xl rounded-md lg:w-5/12 mx-auto p-8 bg-slate-900">
+        <h3 className="text-center text-white text-2xl font-semibold mb-4">
+          Please login
+        </h3>
         <form onSubmit={handleSubmit}>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text">Email Address</span>
+              <span className="label-text text-white">Email Address</span>
             </label>
             <input
               type="email"
@@ -82,7 +84,7 @@ const Login = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text text-white">Password</span>
             </label>
             <input
               type="password"
@@ -92,40 +94,43 @@ const Login = () => {
             />
 
             <label className="label mt-3">
-              <span className="label-text-alt">
+              <span className="label-text-alt text-white">
                 New to Tech-school Please{" "}
-                <Link to="/register" className="underline">
+                <Link
+                  to="/register"
+                  className="underline text-orange-900 hover:text-orange-900"
+                >
                   Register
                 </Link>
               </span>
             </label>
           </div>
           <div className="form-control w-full max-w-md mx-auto mt-3">
-            <button className="btn btn-warning" type="submit">
+            <button className="btn bg-orange-900 border-0" type="submit">
               Login
             </button>
           </div>
         </form>
-        <div className="divider">OR</div>
+        <div className="divider text-white">OR</div>
         <div className="flex justify-around align-middle">
           <div>
-            <div className="card shadow-xl">
+            <div className="card shadow-xl bg-slate-300">
               <button
-                className="card-body text-4xl text-center"
+                className="card-body text-4xl"
                 onClick={handleGoogleLogin}
               >
-                <FaGoogle />
+                <FaGoogle className="ml-2" />
                 <span className="text-sm">Google</span>
               </button>
             </div>
           </div>
           <div>
-            <div className="card shadow-xl">
+            <div className="card shadow-xl bg-slate-300">
               <button
                 className="card-body text-4xl"
                 onClick={handleGithubLogin}
               >
-                <FaGithub />
+                <FaGithub className="ml-2" />
                 <span className="text-sm">Github</span>
               </button>
             </div>

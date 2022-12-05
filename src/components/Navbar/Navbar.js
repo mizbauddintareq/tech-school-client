@@ -44,7 +44,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu font-bold text-orange-900 menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <Link to="/">Home</Link>
@@ -88,10 +88,14 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+          <Link className="btn btn-ghost normal-case text-3xl font-bold" to="/">
+            <h1 className="logo-text text-orange-700">
+              Tech <span className="text-orange-900">School</span>
+            </h1>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal p-0 font-bold text-orange-900">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -134,7 +138,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end text-orange-900">
           {user?.photoURL ? (
             <label
               tabIndex={0}

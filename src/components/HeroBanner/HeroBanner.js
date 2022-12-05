@@ -5,6 +5,7 @@ const HeroBanner = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/FmdTz03/1622955725643.png"
+            alt="img"
             className="max-w-sm rounded-lg"
           />
           <div>
@@ -14,7 +15,9 @@ const HeroBanner = () => {
               Go ahead, give it a try. Our hands-on learning environment means
               you'll be writing real code from your very first lesson.
             </p>
-            <button className="btn btn-warning font-bold">Get Started</button>
+            <button className="btn bg-orange-900 border-0 font-bold">
+              Get Started
+            </button>
           </div>
         </div>
       </div>

@@ -1,14 +1,25 @@
 const Summery = () => {
   return (
-    <div className="w-10/12 mx-auto">
-      <div className="stats shadow w-full bg-orange-50">
+    <div className="md:w-10/12 mx-auto">
+      <h1 className="text-4xl text-center mb-4">Our Mission</h1>
+      <p>
+        We want to create a world where anyone can build something meaningful
+        with technology, and everyone has the learning tools, resources, and
+        opportunities to do so. Code contains a world of possibilities — all
+        that’s required is the curiosity and drive to learn. At Tech School, we
+        are committed to empowering all people, regardless of where they are in
+        their coding journeys, to continue to learn, grow, and make an impact on
+        the world around them.
+      </p>
+      <p></p>
+      <div className="stats shadow w-full bg-orange-50 mt-8">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
+              className="inline-block w-8 h-8 stroke-current text-orange-900"
             >
               <path
                 strokeLinecap="round"
@@ -19,7 +30,7 @@ const Summery = () => {
             </svg>
           </div>
           <div className="stat-title">Total Students</div>
-          <div className="stat-value text-primary">23.5K</div>
+          <div className="stat-value text-orange-900">23.5K</div>
           <div className="stat-desc">91% got hired after finished course.</div>
         </div>
 
@@ -29,7 +40,7 @@ const Summery = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              className="inline-block w-8 h-8 stroke-current"
+              className="inline-block w-8 h-8 stroke-current text-orange-700"
             >
               <path
                 strokeLinecap="round"
@@ -40,14 +51,14 @@ const Summery = () => {
             </svg>
           </div>
           <div className="stat-title">Total Instructor</div>
-          <div className="stat-value text-secondary">100+</div>
+          <div className="stat-value text-orange-700">100+</div>
           <div className="stat-desc">24/7 online and offline support.</div>
         </div>
 
         <div className="stat">
           <div className="stat-value">95%</div>
           <div className="stat-title">Positive Reviews</div>
-          <div className="stat-desc text-secondary">on social media.</div>
+          <div className="stat-desc text-orange-700">on social media</div>
         </div>
       </div>
     </div>
