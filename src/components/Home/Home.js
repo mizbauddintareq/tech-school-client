@@ -1,11 +1,13 @@
-import Courses from "../Courses/Courses";
+import HeroBanner from "../HeroBanner/HeroBanner";
 import Slider from "../Slider/Slider";
+import Summery from "../Summery/Summery";
 
 const Home = () => {
   return (
     <div>
       <Slider />
-      <Courses />
+      <HeroBanner />
+      <Summery />
     </div>
   );
 };
