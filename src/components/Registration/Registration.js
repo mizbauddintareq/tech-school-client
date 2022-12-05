@@ -47,12 +47,14 @@ const Registration = () => {
   };
   return (
     <div className="mt-14">
-      <div className="card-shadow lg:w-5/12 mx-auto p-8">
-        <h3 className="text-center">Please register</h3>
+      <div className="rounded-md lg:w-5/12 mx-auto p-8 bg-slate-900">
+        <h3 className="text-center text-white text-2xl font-semibold mb-4">
+          Please register
+        </h3>
         <form onSubmit={handleSubmit}>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text">Full Name</span>
+              <span className="label-text text-white">Full Name</span>
             </label>
             <input
               type="text"
@@ -63,7 +65,7 @@ const Registration = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text">Email Address</span>
+              <span className="label-text text-white">Email Address</span>
             </label>
             <input
               type="email"
@@ -74,7 +76,7 @@ const Registration = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text text-white">Password</span>
             </label>
             <input
               type="password"
@@ -85,7 +87,7 @@ const Registration = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text">Photo URL</span>
+              <span className="label-text text-white">Photo URL</span>
             </label>
             <input
               type="text"
@@ -94,16 +96,16 @@ const Registration = () => {
               className="input input-bordered w-full max-w-md"
             />
             <label className="label mt-3">
-              <span className="label-text-alt">
+              <span className="label-text-alt text-white">
                 Already have an account? Please{" "}
-                <Link to="/login" className="underline">
+                <Link to="/login" className="underline text-orange-900">
                   Login
                 </Link>
               </span>
             </label>
           </div>
           <div className="form-control w-full max-w-md mx-auto mt-3">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn bg-orange-900 border-0" type="submit">
               Register
             </button>
           </div>
