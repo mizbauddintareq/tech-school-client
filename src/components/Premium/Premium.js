@@ -7,7 +7,7 @@ const Premium = () => {
   return (
     <div className="py-14 bg-orange-50 dark:bg-slate-900">
       <div className="md:w-5/12 mx-auto">
-        <div className=" dark:text-white">
+        <div className=" dark:text-white text-slate-900">
           <h3 className="font-bold text-3xl my-4 text-center">
             You have successfully purses {name} course.
           </h3>

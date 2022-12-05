@@ -49,13 +49,15 @@ const Registration = () => {
   return (
     <div className="py-14 bg-orange-50 dark:bg-slate-900">
       <div className="rounded-md lg:w-5/12 mx-auto p-8 bg-orange-50 dark:bg-slate-900 dark:shadow-md shadow-2xl dark:shadow-white">
-        <h3 className="text-center text-2xl dark:text-white font-semibold mb-4">
+        <h3 className="text-center text-2xl dark:text-white text-slate-900 font-semibold mb-4">
           Please register
         </h3>
         <form onSubmit={handleSubmit}>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text dark:text-white">Full Name</span>
+              <span className="label-text dark:text-white text-slate-900">
+                Full Name
+              </span>
             </label>
             <input
               type="text"
@@ -66,7 +68,9 @@ const Registration = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text dark:text-white">Email Address</span>
+              <span className="label-text dark:text-white text-slate-900">
+                Email Address
+              </span>
             </label>
             <input
               type="email"
@@ -77,7 +81,9 @@ const Registration = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text dark:text-white">Password</span>
+              <span className="label-text dark:text-white text-slate-900">
+                Password
+              </span>
             </label>
             <input
               type="password"
@@ -88,7 +94,9 @@ const Registration = () => {
           </div>
           <div className="form-control w-full max-w-md mx-auto">
             <label className="label">
-              <span className="label-text dark:text-white">Photo URL</span>
+              <span className="label-text dark:text-white text-slate-900">
+                Photo URL
+              </span>
             </label>
             <input
               type="text"
@@ -97,7 +105,7 @@ const Registration = () => {
               className="input input-bordered w-full max-w-md"
             />
             <label className="label mt-3">
-              <span className="label-text-alt dark:text-white">
+              <span className="label-text-alt dark:text-white text-slate-900">
                 Already have an account? Please{" "}
                 <Link to="/login" className="underline text-orange-900">
                   Login

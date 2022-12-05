@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <hr />
-      <footer className="footer p-10 bg-orange-50 dark:bg-slate-900 dark:text-white">
+      <footer className="footer p-10 bg-orange-50 dark:bg-slate-900 dark:text-white text-slate-900">
         <div>
           <Link className="btn btn-ghost normal-case text-3xl font-bold" to="/">
             <h1 className="logo-text text-orange-700">

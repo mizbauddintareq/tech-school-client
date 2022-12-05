@@ -1,6 +1,6 @@
 const Summery = () => {
   return (
-    <div className="bg-orange-50 dark:bg-slate-900 dark:text-white pb-16">
+    <div className="bg-orange-50 dark:bg-slate-900 dark:text-white pb-16 text-slate-900">
       <div className="w-10/12 mx-auto">
         <h1 className="text-4xl text-center mb-4">Our Mission</h1>
         <p>

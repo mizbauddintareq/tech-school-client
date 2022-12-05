@@ -4,7 +4,7 @@ const Blogs = () => {
   const blogs = useLoaderData();
 
   return (
-    <div className="py-14 bg-orange-50 dark:bg-slate-900 dark:text-white">
+    <div className="py-14 bg-orange-50 dark:bg-slate-900 dark:text-white text-slate-900">
       <div className="md:w-9/12 mx-auto">
         <h1 className="text-center text-4xl">Welcome to Blogs</h1>
         {blogs.map((blog, index) => (

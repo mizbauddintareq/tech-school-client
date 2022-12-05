@@ -1,7 +1,7 @@
 const HeroBanner = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-orange-50 dark:bg-slate-900 dark:text-white">
+      <div className="hero min-h-screen bg-orange-50 dark:bg-slate-900 dark:text-white text-slate-900">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/FmdTz03/1622955725643.png"

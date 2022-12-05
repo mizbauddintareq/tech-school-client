@@ -21,7 +21,7 @@ const CourseDetails = () => {
           <figure>
             <img src={thumb} alt="Album" className="image-full" />
           </figure>
-          <div className="card-body dark:text-white">
+          <div className="card-body dark:text-white text-slate-900">
             <h2 className="card-title">
               {name}{" "}
               <ReactToPdf
