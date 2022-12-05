@@ -117,7 +117,7 @@ const Login = () => {
         <div className="divider dark:text-white">OR</div>
         <div className="flex justify-around align-middle">
           <div>
-            <div className="card shadow-2xl bg-orange-50 dark:bg-slate-300">
+            <div className="card shadow-2xl bg-orange-500 dark:bg-slate-300">
               <button
                 className="card-body text-4xl"
                 onClick={handleGoogleLogin}
